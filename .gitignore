@@ -1,0 +1,15 @@
+# .NET
+bin/
+obj/
+# Python
+.venv/
+__pycache__/
+# Unity
+Simulador3D/[Ll]ibrary/
+Simulador3D/[Tt]emp/
+Simulador3D/[Oo]bj/
+Simulador3D/[Bb]uild/
+Simulador3D/[Ll]ogs/
+Simulador3D/[Uu]ser[Ss]ettings/
+# Resultados pesados (se regeneran)
+resultados/*.csv

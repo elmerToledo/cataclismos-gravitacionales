@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Motor gravitacional: librería pura, sin Unity.
+       netstandard2.1 para que Unity pueda cargar la DLL. -->
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>9.0</LangVersion>
+    <Nullable>disable</Nullable>
+    <RootNamespace>Cataclismos.Motor</RootNamespace>
+    <AssemblyName>Cataclismos.Motor</AssemblyName>
+  </PropertyGroup>
+
+  <!-- Después de compilar, copia la DLL al proyecto de Unity -->
+  <Target Name="CopiarAUnity" AfterTargets="Build">
+    <Copy SourceFiles="$(TargetPath)"
+          DestinationFolder="$(MSBuildThisFileDirectory)..\Simulador3D\Assets\Plugins\Motor\"
+          SkipUnchangedFiles="true" />
+  </Target>
+</Project>
